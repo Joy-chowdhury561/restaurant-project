@@ -56,18 +56,22 @@ navBlur.addEventListener("click", () => {
 });
 homeBtn.addEventListener("click", () => {
   heroImg.scrollIntoView({
-    block: "start"
+    behavior:"smooth",
+    block: "start",
   });
   closeSidebar();
 });
 menuBtn.addEventListener("click", () => {
   menuSection.scrollIntoView({
+    behavior:"smooth",
     block: "start"
+    
   });
   closeSidebar();
 });
 aboutBtn.addEventListener("click", () => {
   aboutSection.scrollIntoView({
+    behavior:"smooth",
     block: "start"
   });
   closeSidebar();
