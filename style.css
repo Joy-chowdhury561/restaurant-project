@@ -976,9 +976,3 @@ textarea {
   }
  
 }
-#about,
-#menu,
-.chefs,
-footer {
-  overflow: hidden;
-}
