@@ -569,7 +569,21 @@ nav ul li:hover .pages-info {
   height: 5px;
   background-color: rgb(255, 166, 0);
   border-radius: 14px;
+  transform: translateX(0%);
+  transition: all 0.8s ease;
 }
+.bld-container.breakfast::after {
+  transform: translateX(0%);
+}
+
+.bld-container.lunch-active::after {
+  transform: translateX(100%);
+}
+
+.bld-container.dinner-active::after {
+  transform: translateX(200%);
+}
+
 .bld-container h4 {
   font-size: clamp(1rem, 1vw, 10rem);
   color: rgb(0, 0, 0);

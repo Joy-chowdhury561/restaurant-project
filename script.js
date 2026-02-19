@@ -56,23 +56,22 @@ navBlur.addEventListener("click", () => {
 });
 homeBtn.addEventListener("click", () => {
   heroImg.scrollIntoView({
-    behavior:"smooth",
+    behavior: "smooth",
     block: "start",
   });
   closeSidebar();
 });
 menuBtn.addEventListener("click", () => {
   menuSection.scrollIntoView({
-    behavior:"smooth",
-    block: "start"
-    
+    behavior: "smooth",
+    block: "start",
   });
   closeSidebar();
 });
 aboutBtn.addEventListener("click", () => {
   aboutSection.scrollIntoView({
-    behavior:"smooth",
-    block: "start"
+    behavior: "smooth",
+    block: "start",
   });
   closeSidebar();
 });
@@ -154,13 +153,31 @@ observer.observe(menuHeading);
 observer.observe(chefArea);
 observer.observe(form);
 
-
-const observer2=new IntersectionObserver((entries)=>{
-      entries.forEach((entry)=>{
-        entry.target.classList.toggle("show",entry.isIntersecting)
-      })
-},{threshold:0.9})
+const observer2 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  { threshold: 0.9 },
+);
 itemCards.forEach((card) => {
   observer2.observe(card);
   console.log(card);
+});
+const breakFast = document.querySelector(".break-fast");
+const lunch = document.querySelector(".lunch");
+const dinner = document.querySelector(".dinner");
+const bldContainer = document.querySelector(".bld-container");
+
+breakFast.addEventListener("click", () => {
+  bldContainer.className = "bld-container breakfast";
+});
+
+lunch.addEventListener("click", () => {
+  bldContainer.className = "bld-container lunch-active";
+});
+
+dinner.addEventListener("click", () => {
+  bldContainer.className = "bld-container dinner-active";
 });
