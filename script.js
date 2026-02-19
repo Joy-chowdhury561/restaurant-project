@@ -56,22 +56,19 @@ navBlur.addEventListener("click", () => {
 });
 homeBtn.addEventListener("click", () => {
   heroImg.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    block: "start"
   });
   closeSidebar();
 });
 menuBtn.addEventListener("click", () => {
   menuSection.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    block: "start"
   });
   closeSidebar();
 });
 aboutBtn.addEventListener("click", () => {
   aboutSection.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    block: "start"
   });
   closeSidebar();
 });
@@ -158,7 +155,7 @@ const observer2=new IntersectionObserver((entries)=>{
       entries.forEach((entry)=>{
         entry.target.classList.toggle("show",entry.isIntersecting)
       })
-},{threshold:0.8})
+},{threshold:0.9})
 itemCards.forEach((card) => {
   observer2.observe(card);
   console.log(card);

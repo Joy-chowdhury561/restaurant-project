@@ -4,17 +4,20 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-html {
-  scroll-behavior: smooth;
+html, body {
   overflow-x: hidden;
 }
+
+#hero-image {
+  min-height: 100vh;
+}
+
 #hero-image {
   background-image: url(restaurant\ hero\ image.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -24,11 +27,11 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(4, 7, 8, 0.89);
 }
 nav {
-  height: 10vh;
+  height: 10%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -59,6 +62,7 @@ nav {
   background-repeat: no-repeat;
 }
 aside {
+ 
   background: linear-gradient(
     180deg,
     rgb(211, 211, 0),
@@ -76,7 +80,7 @@ aside {
   flex-direction: column;
   justify-content: center;
 
-  transform: translateX(150%);
+  transform: translateX(100%);
   transition: all 0.5s ease;
 }
 .pages {
@@ -141,7 +145,7 @@ aside ul {
 aside ul li {
   cursor: pointer;
   padding: 5vw 0;
-  width: 50vw;
+  width: 90%;
   border-radius: 2rem;
   padding-left: 5vw;
   box-shadow:
@@ -165,6 +169,7 @@ aside ul li {
   box-shadow:
     2px 2px 5px black,
     -2px -2px 5px white inset;
+    
 }
 .hamburger-container.show {
   transform: translateY(0rem);
@@ -905,10 +910,16 @@ textarea {
       2px 3px 7px white inset,
       2px 2px 10px black;
   }
+  .item-card{
+    transform: translateX(5rem);
+  }
 }
 @media (max-width: 500px) {
   .breakfast-items .card-container .item-card {
     flex-basis: 90%;
+  }
+  .item-card{
+    transform: translateX(2rem);
   }
   .input-container {
     width: 90vw;
@@ -949,4 +960,10 @@ textarea {
     margin-left: 1rem;
   }
  
+}
+#about,
+#menu,
+.chefs,
+footer {
+  overflow: hidden;
 }
