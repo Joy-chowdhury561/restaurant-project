@@ -91,7 +91,6 @@ const observer = new IntersectionObserver(
 
       if (entry.target === heroImg) {
         navH1.classList.add("show");
-        hamBtn.classList.add("show");
         bigMsg.classList.add("show");
         rotatingPlate.classList.add("show");
       }

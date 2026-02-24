@@ -4,9 +4,10 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-html, body {
-  overflow-x: hidden;
+body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 #hero-image {
@@ -20,7 +21,6 @@ html, body {
   background-repeat: no-repeat;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 #hero-image::before {
   content: "";
@@ -63,7 +63,6 @@ nav {
   background-repeat: no-repeat;
 }
 aside {
- 
   background: linear-gradient(
     180deg,
     rgb(211, 211, 0),
@@ -81,7 +80,7 @@ aside {
   flex-direction: column;
   justify-content: center;
 
-  transform: translateX(100%);
+  transform: translateX(200%);
   transition: all 0.5s ease;
 }
 .pages {
@@ -154,28 +153,18 @@ aside ul li {
     2px 2px 5px rgb(0, 0, 0);
 }
 .hamburger-container {
-  background: linear-gradient(90deg, yellow, orange);
-  height: 10vw;
-  width: 10vw;
+  height:10vw;
+  width:10vw;
+  background: linear-gradient(160deg,yellow,orange);
   position: fixed;
+  z-index:995;
   border-radius: 50%;
-  right: 4vw;
-  top: 4vw;
+  top:1rem;
+  right:1rem;
   display: none;
   place-items: center;
-  cursor: pointer;
-  transform: translateY(2rem);
-  opacity: 0;
-  transition: all 0.9s ease;
-  box-shadow:
-    2px 2px 5px black,
-    -2px -2px 5px white inset;
-    
 }
-.hamburger-container.show {
-  transform: translateY(0rem);
-  opacity: 1;
-}
+
 .hamburger-icon {
   background-image: url(hamburger.svg);
   background-size: cover;
@@ -249,6 +238,7 @@ nav ul li:hover .pages-info {
   flex-direction: column;
   justify-content: center;
   border-radius: 5px;
+  z-index: 5;
 }
 .pages-info p {
   cursor: pointer;
@@ -316,11 +306,11 @@ nav ul li:hover .pages-info {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: clamp(7rem, 25vw, 30rem);
-  height: clamp(7rem, 25vw, 30rem);
+  width: clamp(6rem, 20vw, 30rem);
+  height: clamp(6rem, 20vw, 30rem);
   position: absolute;
   top: 40%;
-  right: 5%;
+  right: 10%;
   animation: rotateplate 7s linear infinite;
   opacity: 0;
   transition: all 0.5s ease;
@@ -513,7 +503,8 @@ nav ul li:hover .pages-info {
 .card h1 {
   font-size: clamp(3rem, 3vw, 10rem);
 }
-.card p,.card h2 {
+.card p,
+.card h2 {
   font-size: clamp(1rem, 1vw, 10rem);
 }
 
@@ -530,10 +521,9 @@ nav ul li:hover .pages-info {
   text-align: center;
   color: rgb(21, 22, 29);
   font-size: clamp(2rem, 3vw, 10rem);
-  transform: translateY(2rem),scale(1);
+  transform: translateY(2rem), scale(1);
   opacity: 0;
   transition: all 0.7s ease;
-
 }
 #menu h2.show {
   transform: translateY(0rem);
@@ -548,7 +538,7 @@ nav ul li:hover .pages-info {
   position: relative;
   gap: 1rem;
   margin-bottom: 10px;
-  margin:2rem 0;
+  margin: 2rem 0;
 }
 .bld-container::before {
   content: "";
@@ -622,70 +612,71 @@ nav ul li:hover .pages-info {
   background-image: url(burger.svg);
 }
 
-.items{
+.items {
   height: auto;
   display: flex;
-  width:95%;
+  width: 95%;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
 }
-.item-card{
+.item-card {
   cursor: pointer;
-  height:5rem;
-  width:clamp(20rem, calc(50% - 3rem),30rem);
+  height: 5rem;
+  width: clamp(20rem, calc(50% - 3rem), 30rem);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-shadow:2px 2px 10px black,2px 2px 5px white ;
-  border-radius:1rem;
-  gap:1rem;
+  box-shadow:
+    2px 2px 10px black,
+    2px 2px 5px white;
+  border-radius: 1rem;
+  gap: 1rem;
   transition: all 0.3s ease;
   transform: translateX(10rem);
-  opacity:0;
+  opacity: 0;
 }
-.item-card.show{
-  transform:translateX(0rem);
-  opacity:1;
+.item-card.show {
+  transform: translateX(0rem);
+  opacity: 1;
 }
-.item-image{
+.item-image {
   background-image: url(burger-image.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height:100%;
-  width:5rem;
-  border-top-left-radius:1rem ;
-  border-bottom-left-radius:1rem ;
+  height: 100%;
+  width: 5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
-.item-info{
+.item-info {
   display: flex;
   flex-direction: column;
-  height:100%;
+  height: 100%;
   width: 80%;
-
 }
 
-.item-name-price{
-  height:70%;
+.item-name-price {
+  height: 70%;
   display: flex;
-  flex-direction:row;
-  justify-content:space-between;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid rgb(175, 175, 175);
 }
-.item-name-price h2:nth-child(2){
-  color:rgb(255, 187, 0);
-  font-size:clamp(1.5rem,1.5vw,10rem);
-  height:100%;
-  margin-top:1rem;
+.item-name-price h2:nth-child(2) {
+  color: rgb(255, 187, 0);
+  font-size: clamp(1.5rem, 1.5vw, 10rem);
+  height: 100%;
+  margin-top: 1rem;
 }
-.item-name-price h2:first-child{
+.item-name-price h2:first-child {
   white-space: nowrap;
-  font-size: clamp(1rem,1vw,10rem);
+  font-size: clamp(1rem, 1vw, 10rem);
 }
 #our-chefs {
   text-align: center;
@@ -693,7 +684,7 @@ nav ul li:hover .pages-info {
   font-size: clamp(2rem, 7vw, 15rem);
   margin-top: 4rem;
 }
-.chefs{
+.chefs {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -703,10 +694,10 @@ nav ul li:hover .pages-info {
   flex-wrap: wrap;
   transition: all 0.5s ease;
   transform: translateX(5rem);
-  opacity:0;
-  height:30vh;
+  opacity: 0;
+  height: 30vh;
 }
-.chefs.show{
+.chefs.show {
   transform: translateX(0rem);
   opacity: 1;
 }
@@ -854,11 +845,11 @@ form {
   height: 30rem;
   transition: all 0.7s ease;
   transform: translateY(5rem);
-  opacity:0;
+  opacity: 0;
 }
-form.show{
+form.show {
   transform: translateY(0rem);
-  opacity:1;
+  opacity: 1;
 }
 .input-container {
   display: grid;
@@ -894,12 +885,12 @@ textarea {
 
 /* tablet */
 @media (max-width: 768px) {
-   .chefs {
+  .chefs {
     height: auto;
   }
+  /* make the hamburger visible on small screens */
   .hamburger-container {
     display: grid;
-    z-index: 997;
   }
   .input-container {
     width: 40vw;
@@ -925,7 +916,7 @@ textarea {
       2px 3px 7px white inset,
       2px 2px 10px black;
   }
-  .item-card{
+  .item-card {
     transform: translateX(5rem);
   }
 }
@@ -933,7 +924,7 @@ textarea {
   .breakfast-items .card-container .item-card {
     flex-basis: 90%;
   }
-  .item-card{
+  .item-card {
     transform: translateX(2rem);
   }
   .input-container {
@@ -974,5 +965,4 @@ textarea {
   .animating-info {
     margin-left: 1rem;
   }
- 
 }
