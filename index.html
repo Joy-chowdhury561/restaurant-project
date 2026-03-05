@@ -3,410 +3,324 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eat and Treat</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="hero-image">
-      <nav>
-        <div class="logo">
-          <h1>Delicious</h1>
-        </div>
+    <div class="hero-image">
+      <div class="block"></div>
+      <div class="nav">
+        <h1>Delicious</h1>
         <ul>
-          <li><a href="#hero-image">Home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#menu">menu</a></li>
-          <li>
-            <a id="pages-btn" href="#">pages</a
-            ><svg
-              class="dropdown-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#ffffff"
-              viewBox="0 0 24 24"
-              stroke="#ffffff"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier"><path d="M7 10l5 5 5-5z"></path></g>
-            </svg>
-            <div class="pages-info">
-              <p>Booking</p>
-              <p>Testimonial</p>
-              <p>Team</p>
-            </div>
+          <li class="homeBtn">home</li>
+          <li class="aboutBtn">about</li>
+          <li class="menuBtn">menu</li>
+          <li id="pages">
+            pages
+            <ul class="pages-info">
+              <li>booking</li>
+              <li>Team</li>
+              <li>Testimonial</li>
+            </ul>
           </li>
-          <li class="book-table">BOOK A TABLE</li>
+          <button class="book">Book</button>
+          
         </ul>
-      </nav>
-      <div class="navblur"></div>
-
+      </div>
       <aside>
-        <div class="close-btn-container">
-          <div class="closebtn-icon"></div>
+        <div class="cross-btn-container">
+          <div class="cross-btn"></div>
         </div>
         <ul>
-          <li id="side-home">Home</li>
-          <li id="side-about">About</li>
-          <li id="side-menu">Menu</li>
-
-          <div class="pages">
-            <li id="sidepages">Pages</li>
-            <div class="page">Booking</div>
-            <div class="page">Testimonial</div>
-            <div class="page">Team</div>
-          </div>
-          <div class="book-table">Book table</div>
+          <li class="homeBtn">Home</li>
+          <li class="aboutBtn">About</li>
+          <li  class="menuBtn">Menu</li>
+          <li class="book">book</li>
         </ul>
       </aside>
+      <div class="nav-blur"></div>
+      <div class="hamburger-btn-container">
+            <div class="hamburger-btn"></div>
+          </div>
 
-      <div class="big-msg">
-        <h2>Enjoy your Meal</h2>
-        <p>Experience the best dining with us</p>
-        <div class="book-table">BOOK TABLE!</div>
-      </div>
-      <div class="rotating-plate"></div>
-    </div>
-    <div class="hamburger-container">
-      <div class="hamburger-icon"></div>
-    </div>
-
-    <div id="about">
-      <div class="about-options">
-        <div class="info-cards">
-          <div class="chef-icon icon"></div>
-          <h3>Master Chefs</h3>
-          <p>We have top tier chefs with over 5 years+ cooking experience.</p>
-        </div>
-        <div class="info-cards">
-          <div class="fork-icon icon"></div>
-          <h3>Best Food</h3>
+      <div class="bottom-info">
+        <div class="left-info">
+          <h1>Enjoy your dish with us</h1>
           <p>
-            We use only the freshest ingredients to create our delicious dishes.
+            Welcome to Eat & Treat, where flavor meets comfort. Our restaurant
+            website is designed to showcase a delightful dining experience with
+            an elegant and modern interface. From beautifully presented dishes
+            to a warm and inviting atmosphere, every section of the site
+            reflects our passion for great food and hospitality
           </p>
+          <div class="book">Book</div>
         </div>
-        <div class="info-cards">
-          <div class="cart-icon icon"></div>
-          <h3>Order Item</h3>
-          <p>
-            We use only the freshest ingredients to create our delicious dishes.
-          </p>
-        </div>
-        <div class="info-cards">
-          <div class="customar-icon icon"></div>
-          <h3>Get help</h3>
-          <p>
-            We use only the freshest ingredients to create our delicious dishes.
-          </p>
+        <div class="right-info">
+          <div class="rotating-plate"></div>
         </div>
       </div>
+    </div>
 
-      <div class="about-info">
-        <div class="images">
-          <div class="restaurant-img1"></div>
-          <div class="restaurant-img2"></div>
-        </div>
-        <div class="about-text">
-          <h1>Welcome to Delicious</h1>
-          <p>
-            Welcome to our restaurant, where flavor meets passion. We serve
-            freshly prepared dishes made with high-quality ingredients, bold
-            spices, and authentic recipes. From sizzling grills to rich curries
-            and handcrafted beverages, every plate is designed to give you an
-            unforgettable dining experience. Whether you're here for a family
-            dinner, a casual hangout, or a special celebration, our warm
-            atmosphere and exceptional service make every visit special. Taste
-            the difference. Experience the excellence
-          </p>
-          <div class="animating-info">
-            <div class="card">
-              <h1>0</h1>
-              <div class="collumn">
-                <p>Years of</p>
-                <h2>Experience</h2>
-              </div>
+    <div class="arrow-btn-container">
+      <div class="arrow-btn"></div>
+    </div>
+
+    <div class="restaurant-info">
+      <div class="cards">
+        <div class="chef-icon"></div>
+        <h1>Master chefs</h1>
+        <p>we got over 50+ qualified chefs</p>
+      </div>
+      <div class="cards">
+        <div class="fork-icon"></div>
+        <h1>Quality foods</h1>
+        <p>You can expect quality food from us</p>
+      </div>
+      <div class="cards">
+        <div class="cart-icon"></div>
+        <h1>online order</h1>
+        <p>You can orde online. And wait fo the delicious food</p>
+      </div>
+      <div class="cards">
+        <div class="service-icon"></div>
+        <h1>24/7 service</h1>
+        <p>we provide you food when ever you need</p>
+      </div>
+    </div>
+    <div class="about">
+      <div class="images">
+        <div class="image1"></div>
+        <div class="image2"></div>
+      </div>
+      <div class="info">
+        <h1>Welcome to delicious</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
+          totam unde cupiditate eos, sunt a magni saepe ad exercitationem
+          numquam qui inventore laboriosam voluptates non illo consequatur
+          necessitatibus! Provident, ad.
+        </p>
+        <div class="animating-info">
+          <div class="info-1">
+            <h1>7</h1>
+            <div class="info-texts">
+              <p>years of</p>
+              <h2>experience</h2>
             </div>
-            <div class="card">
-              <h1>0</h1>
-              <div class="collumn">
-                <p>Popular</p>
-                <h2>Chefs</h2>
-              </div>
+          </div>
+          <div class="info-1">
+            <h1>50+</h1>
+            <div class="info-texts">
+              <p>popular</p>
+              <h2>master chefs</h2>
             </div>
           </div>
         </div>
+        <div class="read-more">Read more</div>
       </div>
     </div>
-
-    <div id="menu">
-      <h2 id="menu-heading">Most popular items</h2>
-      <div class="bld-container">
-        <div class="break-fast">
-          <div class="cup-icon icon"></div>
-          <div class="msg">
+    <div class="menu">
+      <h1 class="menu-heading">Most Popular Items</h1>
+      <div class="menu-options">
+        <div class="option breakfast">
+          <div class="cup-icon"></div>
+          <div class="info">
             <p>popular</p>
-            <h4>Breakfast</h4>
+            <h1>Breakfast</h1>
+          </div>
+        </div>
+        <div class="option lunch">
+          <div class="burger-icon"></div>
+          <div class="info">
+            <p>special</p>
+            <h1>lunch</h1>
+          </div>
+        </div>
+        <div class="option dinner">
+          <div class="fork-icon"></div>
+          <div class="info">
+            <p>Lovely</p>
+            <h1>Dinner</h1>
           </div>
         </div>
 
-        <div class="lunch">
-          <div class="burger-icon icon"></div>
-          <div class="msg">
-            <p>special</p>
-            <h4>Lunch</h4>
-          </div>
-        </div>
-        <div class="dinner">
-          <div class="fork-icon icon"></div>
-          <div class="msg">
-            <p>Lovely</p>
-            <h4>Dinner</h4>
-          </div>
+        <div class="seekbar">
+          <div class="seek-fill"></div>
         </div>
       </div>
 
       <div class="items">
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
+            <p>juicy burger</p>
           </div>
         </div>
 
         <div class="item-card">
-          <div class="item-image"></div>
-          <div class="item-info">
-            <div class="item-name-price">
-              <h2>Chicken burger</h2>
-              <h2>$128</h2>
+          <div class="image"></div>
+          <div class="info">
+            <div class="price-name">
+              <h1>Chicken Burger</h1>
+              <h1>115$</h1>
             </div>
-            <p>tasty and juicy</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h1 id="our-chefs">Our Chefs</h1>
-    <div class="chefs">
-      <div class="chef-card">
-        <div class="chef-photo-1"></div>
-        <div class="chef-info">
-          <h3>John Doe</h3>
-          <p>Head Chef</p>
-        </div>
-
-        <div class="social-media">
-          <div class="icon">
-            <div class="facebook-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="instagram-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="twitter-icon"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="chef-card">
-        <div class="chef-photo-2"></div>
-        <div class="chef-info">
-          <h3>Lisa hamburg</h3>
-          <p>saucier</p>
-        </div>
-
-        <div class="social-media">
-          <div class="icon">
-            <div class="facebook-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="instagram-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="twitter-icon"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="chef-card">
-        <div class="chef-photo-3"></div>
-        <div class="chef-info">
-          <h3>Adam Swift</h3>
-          <p>patissier</p>
-        </div>
-
-        <div class="social-media">
-          <div class="icon">
-            <div class="facebook-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="instagram-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="twitter-icon"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="chef-card">
-        <div class="chef-photo-4"></div>
-        <div class="chef-info">
-          <h3>Jenny crawford</h3>
-          <p>entremetier</p>
-        </div>
-
-        <div class="social-media">
-          <div class="icon">
-            <div class="facebook-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="instagram-icon"></div>
-          </div>
-          <div class="icon">
-            <div class="twitter-icon"></div>
+            <p>juicy burger</p>
           </div>
         </div>
       </div>
     </div>
 
     <footer>
-      <div class="left-image"></div>
-      <form method="post">
-        <h1>Book Table Online</h1>
-        <div class="input-container">
-          <input id="name" type="text" placeholder="Name" required />
-          <input id="email" type="email" placeholder="Email" required />
-          <input id="date" type="datetime-local" />
-          <select>
-            <option value="" disabled selected>Number of people</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
+      <div class="booking">
+        <div class="left-image"></div>
+        <div class="right-area">
+          <h1>Book Online</h1>
+          <form>
+          <div class="input-box1">
+            <input placeholder=""  id="name" name="Name" type="text" />
+            <label id="name-label" for="Name"> Name</label>
+          </div>
+          <div class="input-box2">
+            <input placeholder=""  id="email" name="Email" type="email" />
+            <label id="email-label" for="Email"> Email</label>
+          </div>
+
+          <input type="datetime-local" />
+          <select name="numbe of people" id="peoples">
+            <option>1 person</option>
+            <option>2 person</option>
+            <option>3 person</option>
+            <option>4 person</option>
+            <option>5 person</option>
+            <option>6 person</option>
+            <option>7 person</option>
           </select>
-          <textarea placeholder="Special Request" required></textarea>
+          <div class="msg-container">
+            <textarea placeholder=""  name="messege" id="messege"></textarea>
+            <label id="msg-label" for="messege">send messege</label>
+          </div>
+        </form>
+        <div class="button">Book</div>
         </div>
-        <button>Book</button>
-      </form>
+        
+      </div>
     </footer>
-    <script src="script.js"></script>
+
+    
+    <script src="script.js" defer></script>
   </body>
 </html>
