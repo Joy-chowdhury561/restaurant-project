@@ -156,7 +156,7 @@ const observer2 = new IntersectionObserver(
       }
     });
   },
-  { threshold: 1 },
+  { threshold:1},
 );
 cards.forEach((card) => {
   observer2.observe(card);
