@@ -107,58 +107,60 @@ arrowBtn.addEventListener("click", () => {
 });
 // scroll animaitons
 let cards = document.querySelectorAll(".restaurant-info .cards");
-let isRunning=false;
+let isRunning = false;
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        if(!isRunning){
-          let a=0;
-        let b=0;
-        let timer1=setInterval(() => {
-          a++
-          document.querySelector(".info-1 h1").innerText=a;
-          if(a===7){
-          clearInterval(timer1);
-        }
-        }, 400);
-        let timer2=setInterval(() => {
-          b++
-          document.querySelector(".info-2 h1").innerText=b;
-          if(b===38){
-          clearInterval(timer2);
-          document.querySelector(".info-2 h1").innerText=b+"+";
-        }
-        }, 70);
-        isRunning=true;
-        }
-        
-        
-        
       }
+      if (entry.target.classList.contains("animating-info")) {
+          let a = 0;
+          let b = 0;
+          let timer1 = setInterval(() => {
+            a++;
+            document.querySelector(".info-1 h1").innerText = a;
+            if (a === 7) {
+              clearInterval(timer1);
+            }
+          }, 400);
+          let timer2 = setInterval(() => {
+            b++;
+            document.querySelector(".info-2 h1").innerText = b;
+            if (b === 38) {
+              clearInterval(timer2);
+              document.querySelector(".info-2 h1").innerText = b + "+";
+            }
+          }, 70);
+          isRunning = true;
+        }
     });
   },
   { threshold: 0.5 },
 );
 
 document
-  .querySelectorAll(" .nav h1, .nav ul, .left-info, .rotating-plate, .about,.menu-heading,.menu-options,footer")
+  .querySelectorAll(
+    " .nav h1, .nav ul, .left-info, .rotating-plate, .about,.menu-heading,.menu-options,footer,.animating-info",
+  )
   .forEach((el) => observer.observe(el));
 
-  let itemCards=document.querySelectorAll(".item-card");
-const observer2 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
-    }
-  });
-},{threshold:1});
+let itemCards = document.querySelectorAll(".item-card");
+const observer2 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  { threshold: 1 },
+);
 cards.forEach((card) => {
   observer2.observe(card);
 });
-itemCards.forEach((card)=>{
-  observer2.observe(card)
-})
+itemCards.forEach((card) => {
+  observer2.observe(card);
+});
