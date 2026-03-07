@@ -13,16 +13,16 @@ const seekFill = document.querySelector(".seek-fill");
 let breakFast = document.querySelector(".breakfast");
 let dinner = document.querySelector(".dinner");
 let lunch = document.querySelector(".lunch");
-breakFast.addEventListener("click",()=>{
-  seekFill.style.left="0%"
-})
-lunch.addEventListener("click",()=>{
-  seekFill.style.left="35%"
-})
+breakFast.addEventListener("click", () => {
+  seekFill.style.left = "0%";
+});
+lunch.addEventListener("click", () => {
+  seekFill.style.left = "35%";
+});
 
-dinner.addEventListener("click",()=>{
-  seekFill.style.left="67%"
-})
+dinner.addEventListener("click", () => {
+  seekFill.style.left = "67%";
+});
 function scrollToHome() {
   homeSection.scrollIntoView({
     block: "start",
@@ -105,3 +105,55 @@ arrowBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+// scroll animaitons
+let cards = document.querySelectorAll(".restaurant-info .cards");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        let a=0;
+        let b=0;
+        let timer1=setInterval(() => {
+          a++
+          document.querySelector(".info-1 h1").innerText=a;
+          if(a===7){
+          clearInterval(timer1);
+        }
+        }, 400);
+        let timer2=setInterval(() => {
+          b++
+          document.querySelector(".info-2 h1").innerText=b;
+          if(b===38){
+          clearInterval(timer2);
+          document.querySelector(".info-2 h1").innerText=b+"+";
+        }
+        }, 70);
+        
+        
+      }
+    });
+  },
+  { threshold: 0.5 },
+);
+
+document
+  .querySelectorAll(" .nav h1, .nav ul, .left-info, .rotating-plate, .about,.menu-heading,.menu-options,footer")
+  .forEach((el) => observer.observe(el));
+
+  let itemCards=document.querySelectorAll(".item-card");
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+},{threshold:1});
+cards.forEach((card) => {
+  observer2.observe(card);
+});
+itemCards.forEach((card)=>{
+  observer2.observe(card)
+})

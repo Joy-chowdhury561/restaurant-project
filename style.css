@@ -57,89 +57,91 @@ aside ul {
   align-items: center;
   gap: 4vh;
 }
-.nav-blur{
+.nav-blur {
   display: none;
   position: fixed;
-  top:0;
+  top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.603);
   z-index: 993;
 }
-.cross-btn-container{
+.cross-btn-container {
   cursor: pointer;
-  box-shadow:2px 3px 5px black,2px 2px 5px white inset;
-  background:linear-gradient(165deg,white,rgb(165, 165, 165));
-  height:5em;
-  width:5em;
+  box-shadow:
+    2px 3px 5px black,
+    2px 2px 5px white inset;
+  background: linear-gradient(165deg, white, rgb(165, 165, 165));
+  height: 5em;
+  width: 5em;
   position: absolute;
-  left:1em;
-  top:1em;
+  left: 1em;
+  top: 1em;
   border-radius: 50%;
   display: grid;
   place-items: center;
 }
-.cross-btn{
+.cross-btn {
   background-image: url(close-icon.svg);
   background-size: cover;
   background-position: center;
-  height:50%;
-  width:50%;
-
+  height: 50%;
+  width: 50%;
 }
-.arrow-btn-container{
-  height:clamp(3em,3vw,10em);
-  width: clamp(3em,3vw,10em);
-  background-color:rgb(255, 166, 0);
+.arrow-btn-container {
+  height: clamp(3em, 3vw, 10em);
+  width: clamp(3em, 3vw, 10em);
+  background-color: rgb(255, 166, 0);
   position: fixed;
-  right:5em;
-  bottom:5vh;
+  right: 5em;
+  bottom: 5vh;
   z-index: 1000;
   display: grid;
-  place-items:center;
+  place-items: center;
   opacity: 0;
   transition: all 0.5s ease;
   transform: translateX(3em);
 }
-.arrow-btn-container.show{
+.arrow-btn-container.show {
   transform: translateX(0em);
   opacity: 1;
-
 }
-.arrow-btn{
-  background-image:url(arrow.svg);
-  height:50%;
+.arrow-btn {
+  background-image: url(arrow.svg);
+  height: 50%;
   width: 50%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 aside ul li {
-  box-shadow: 2px 3px 10px black,2px 3px 10px white inset;
+  box-shadow:
+    2px 3px 10px black,
+    2px 3px 10px white inset;
   height: 30%;
   border-radius: 1em;
   display: grid;
   place-items: center;
   color: rgb(255, 255, 255);
-  font-size:clamp(2em,3vw,7em);
+  font-size: clamp(2em, 3vw, 7em);
   width: 100%;
   cursor: pointer;
-  font-weight:700;
-
+  font-weight: 700;
 }
-aside ul .book{
-   box-shadow: 2px 3px 10px black,2px 3px 10px white inset;
+aside ul .book {
+  box-shadow:
+    2px 3px 10px black,
+    2px 3px 10px white inset;
   height: 30%;
   border-radius: 1em;
   display: grid;
   place-items: center;
   color: rgb(255, 255, 255);
-  font-size:clamp(2em,3vw,7em);
+  font-size: clamp(2em, 3vw, 7em);
   width: 100%;
   cursor: pointer;
-  font-weight:700;
+  font-weight: 700;
 }
 .bottom-info {
   position: relative;
@@ -154,6 +156,13 @@ aside ul .book{
   justify-content: center;
   padding-left: 5vw;
   gap: 1em;
+  transition: all 0.5s ease;
+  transform: translateY(4em);
+  opacity: 0;
+}
+.left-info.show {
+  opacity: 1;
+  transform: translateY(0em);
 }
 .left-info h1 {
   color: white;
@@ -176,6 +185,13 @@ aside ul .book{
   width: clamp(8rem, 30vw, 50rem);
   height: clamp(8rem, 30vw, 50rem);
   animation: rotating-plate 10s linear infinite;
+  transition: all 0.5s ease;
+  margin-top: 10em;
+  opacity: 0;
+}
+.rotating-plate.show {
+  margin-top: 0em;
+  opacity: 1;
 }
 @keyframes rotating-plate {
   0% {
@@ -234,11 +250,25 @@ aside ul .book{
 .nav h1 {
   color: rgb(255, 166, 0);
   font-size: clamp(2rem, 3vw, 10em);
+  transform: translateX(2em);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.nav h1.show {
+  transform: translateX(0em);
+  opacity: 1;
 }
 .nav > ul {
   display: flex;
   gap: 2rem;
   align-items: center;
+  transform: translateX(-2em);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.nav > ul.show {
+  transform: translateX(0em);
+  opacity: 1;
 }
 .nav ul li {
   list-style: none;
@@ -304,6 +334,12 @@ aside ul .book{
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.5s ease;
+  transform: translateX(-1em);
+  opacity: 0;
+}
+.restaurant-info .cards.show {
+  transform: translateX(0em);
+  opacity: 1;
 }
 .restaurant-info .cards:hover {
   transform: scale(1.05);
@@ -341,6 +377,13 @@ aside ul .book{
 .about {
   width: 100%;
   display: flex;
+  transform: translateY(3em);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.about.show {
+  transform: translateY(0em);
+  opacity: 1;
 }
 .images {
   width: 50%;
@@ -387,11 +430,27 @@ aside ul .book{
   align-items: center;
   gap: 1em;
 }
+.info-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
 .animating-info .info-1 h2 {
   font-size: clamp(1em, 2vw, 5em);
   white-space: nowrap;
 }
+.animating-info .info-2 h2 {
+  font-size: clamp(1em, 2vw, 5em);
+  white-space: nowrap;
+}
 .info-1::before {
+  content: "";
+  height: 100%;
+  width: 7px;
+  background-color: orange;
+}
+.info-2::before {
   content: "";
   height: 100%;
   width: 7px;
@@ -427,6 +486,9 @@ aside ul .book{
   text-align: center;
   font-weight: 700;
   font-size: clamp(2em, 3vw, 4em);
+  transform: translateY(1em);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 .menu-options {
   margin-top: 5vw;
@@ -434,6 +496,17 @@ aside ul .book{
   justify-content: center;
   gap: 2em;
   position: relative;
+  transform: translateY(1em);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.menu-options.show {
+  opacity: 1;
+  transform: translateY(0em);
+}
+.menu-heading.show {
+  opacity: 1;
+  transform: translateY(0em);
 }
 .menu-options .seekbar {
   background-color: rgb(182, 182, 182);
@@ -447,7 +520,7 @@ aside ul .book{
   height: 100%;
   width: 33.3333%;
   position: absolute;
-  left:0%;
+  left: 0%;
   transition: all 0.5s ease;
 }
 .option {
@@ -512,6 +585,12 @@ aside ul .book{
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.5s ease;
+  margin-left: 5em;
+  opacity: 0;
+}
+.item-card.show {
+  opacity: 1;
+  margin-left: 0em;
 }
 .item-card:hover {
   transform: scale(1.05);
@@ -549,8 +628,14 @@ aside ul .book{
 /* footer */
 footer {
   width: 100%;
-
+  transform: translateY(3em);
+  transition: all 0.8s ease;
+  opacity: 0;
   margin-top: 2em;
+}
+footer.show{
+  opacity: 1;
+  transform:translateY(0em);
 }
 .booking {
   width: 100%;
@@ -685,7 +770,7 @@ textarea:not(:placeholder-shown) ~ label {
 }
 /* tablet */
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .nav > ul {
     display: none;
   }
@@ -719,7 +804,7 @@ textarea:not(:placeholder-shown) ~ label {
   .hamburger-btn-container {
     display: grid;
   }
-  .arrow-btn-container{
+  .arrow-btn-container {
     display: none;
   }
 }
