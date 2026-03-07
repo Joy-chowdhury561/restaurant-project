@@ -107,12 +107,14 @@ arrowBtn.addEventListener("click", () => {
 });
 // scroll animaitons
 let cards = document.querySelectorAll(".restaurant-info .cards");
+let isRunning=false;
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        let a=0;
+        if(!isRunning){
+          let a=0;
         let b=0;
         let timer1=setInterval(() => {
           a++
@@ -129,6 +131,9 @@ const observer = new IntersectionObserver(
           document.querySelector(".info-2 h1").innerText=b+"+";
         }
         }, 70);
+        isRunning=true;
+        }
+        
         
         
       }
