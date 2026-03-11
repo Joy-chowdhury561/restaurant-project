@@ -585,8 +585,6 @@ aside ul .book {
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.5s ease;
-  margin-left: 5em;
-  opacity: 0;
 }
 .item-card.show {
   opacity: 1;
@@ -633,9 +631,9 @@ footer {
   opacity: 0;
   margin-top: 2em;
 }
-footer.show{
+footer.show {
   opacity: 1;
-  transform:translateY(0em);
+  transform: translateY(0em);
 }
 .booking {
   width: 100%;
@@ -771,6 +769,11 @@ textarea:not(:placeholder-shown) ~ label {
 /* tablet */
 
 @media (max-width: 768px) {
+  .item-card {
+    transition: all 0.5s ease;
+    margin-left: 5em;
+    opacity: 0;
+  }
   .nav > ul {
     display: none;
   }
